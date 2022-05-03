@@ -65,7 +65,10 @@
                             
                             @else
                                 <li class="nav-item text-uppercase font-weight-bold">
-                                    <a href="{{route('admin.posts.create')}}">Aggiungi post</a>
+                                    <a class="@if (Route::is('admin.posts.index')) text-warning @endif" href="{{route('admin.posts.index')}}">Posts</a>
+                                </li>
+                                <li class="nav-item text-uppercase font-weight-bold">
+                                    <a class="@if (Route::is('admin.posts.create')) text-warning @endif" href="{{route('admin.posts.create')}}">Aggiungi post</a>
                                 </li>
                         @endguest
                     </ul>
