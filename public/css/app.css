@@ -10996,10 +10996,53 @@ a.text-dark:focus {
   font-weight: 600;
 }
 
+#form_create_wrapper .form-group {
+  margin-bottom: 30px;
+}
+
+#form_create_wrapper .form-group label {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(214, 209, 209, 0.867);
+}
+
+#form_edit_wrapper .form-group {
+  margin-bottom: 30px;
+}
+
+#form_edit_wrapper .form-group label {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(214, 209, 209, 0.867);
+}
+
 img {
   max-width: 100%;
   height: 100%;
   display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #343a40 !important;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: white;
+  transition: color 300ms linear;
+}
+
+.navbar .container {
+  gap: 20px !important;
+}
+
+.navbar-nav {
+  row-gap: 15px;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
 }
 
 main {
