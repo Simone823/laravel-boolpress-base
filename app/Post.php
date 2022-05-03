@@ -12,4 +12,9 @@ class Post extends Model
         'image',
         'publication_date'
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
