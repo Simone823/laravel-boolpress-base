@@ -7,7 +7,7 @@
     <section id="section_table_posts">
         
         {{-- Title --}}
-        <h3>Posts</h3>
+        <h3 class="text-white">Posts</h3>
     
         {{-- Table posts --}}
         <table class="table_posts">
