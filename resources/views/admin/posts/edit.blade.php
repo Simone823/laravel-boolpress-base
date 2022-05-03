@@ -40,7 +40,7 @@
     </section>
 
     {{-- Sezione form edit --}}
-    <section id="form_edit_wrapper" class="container">
+    <section id="form_edit_wrapper" class="container text-white">
 
         {{-- Form aggiungi elemento --}}
         <form action="{{route('admin.posts.update', $post)}}" method="POST">
@@ -105,7 +105,7 @@
     
             {{-- BTN aggiungi --}}
             <div class="btn_add d-flex justify-content-center">
-                <button type="submit" class="btn btn-warning">Modifica</button>
+                <button type="submit" class="btn btn-warning font-weight-bold">Modifica</button>
             </div>
     
         </form>
