@@ -17,8 +17,25 @@ img {
     height: 100%;
     display: block;
 }
+
+// .dropdown-item hover
+.dropdown-item:hover {
+    background-color: #343a40 !important;
+} 
+
+// Nav link
+.nav-link {
+    font-size: 18px;
+
+    &:hover {
+        color: white;
+        transition: color 300ms linear;
+    }
+}
 // ----------------------------------
 
+
+// Main
 main {
     padding-top: 100px;
     padding-bottom: 50px;
