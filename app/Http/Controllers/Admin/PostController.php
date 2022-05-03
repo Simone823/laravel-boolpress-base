@@ -90,9 +90,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $post)
     {
-        //
+        // Return view admin.posts.edit
+        return view('admin.posts.edit', compact('post'));
     }
 
     /**
@@ -102,9 +103,30 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $post)
     {
-        //
+        // Salvo la richiesta nella variabile data
+        $data = $request->all();
+
+        // Validazione dati
+        $request->validate([
+            'title' => 'required|min:5|max:200',
+            'description' => 'nullable',
+            'image' => 'required|url',
+            'publication_date' => 'nullable|date|before_or_equal:today'
+        ]);
+
+        // Slug post title
+        $slug = Str::slug($data['title']);
+
+        // Imposto lo sluga post
+        $post->slug = $slug;
+
+        // Modifico i dati
+        $post->update($data);
+
+        // Redirect route admin.posts.index
+        return redirect()->route('admin.posts.index');
     }
 
     /**
