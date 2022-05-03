@@ -61,7 +61,7 @@
                             
                             @else
                                 <li class="nav-item text-uppercase font-weight-bold">
-                                    <a href="{{route('admin.posts.create')}}">Aggiungi</a>
+                                    <a href="{{route('admin.posts.create')}}">Aggiungi post</a>
                                 </li>
                         @endguest
                     </ul>
