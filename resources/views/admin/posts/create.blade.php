@@ -5,7 +5,7 @@
 @section('content')
 
     {{-- Sezione form create wrapper --}}
-    <section id="form_create_wrapper" class="container">
+    <section id="form_create_wrapper" class="container text-white">
 
         {{-- Form aggiungi elemento --}}
         <form action="{{route('admin.posts.store')}}" method="POST">
