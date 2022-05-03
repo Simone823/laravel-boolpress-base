@@ -10968,7 +10968,7 @@ a.text-dark:focus {
 
 #section_table_posts h3 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #section_table_posts .table_posts tr th {
@@ -11003,6 +11003,7 @@ img {
 }
 
 main {
-  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
 
