@@ -31,7 +31,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        // Ritorni mla view admin posts create
+        // Return view admin.posts.create
         return view('admin.posts.create');
     }
 
@@ -113,8 +113,12 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        // Elimino il post
+        $post->delete();
+
+        // Redirect route admin.posts.index
+        return redirect()->route('admin.posts.index');
     }
 }
