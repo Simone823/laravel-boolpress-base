@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Post;
+use Facade\FlareClient\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -29,7 +31,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        // Ritorni mla view admin posts create
+        return view('admin.posts.create');
     }
 
     /**
@@ -40,7 +43,34 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Salvo la richiesta nella variabile data
+        $data = $request->all();
+
+        // Validazione dati
+        $request->validate([
+            'title' => 'required|min:5|max:200',
+            'description' => 'nullable',
+            'image' => 'required|url',
+            'publication_date' => 'nullable|date|before_or_equal:today'
+        ]);
+
+        // Slug post title
+        $slug = Str::slug($data['title']);
+
+        // Creo un nuovo post
+        $post = new Post();
+        
+        // Recupero i dati con il metodo fill
+        $post->fill($data);
+
+        // Imposto lo sluga post
+        $post->slug = $slug;
+
+        // Salvo i dati
+        $post->save();
+
+        // Redirect route admin.posts.index
+        return redirect()->route('admin.posts.index');
     }
 
     /**
