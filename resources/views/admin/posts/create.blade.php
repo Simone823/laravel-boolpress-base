@@ -55,7 +55,7 @@
             </div>
 
             {{-- Date --}}
-            <div class="form-group mb-5">
+            <div class="form-group">
                 <label for="publication_date">Data di pubblicazione</label>
                 <input type="date" class="form-control @error('publication_date') is-invalid @enderror" name="publication_date" id="publication_date" value="{{old('publication_date')}}">
 
