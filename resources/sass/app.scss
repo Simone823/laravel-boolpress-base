@@ -10,6 +10,9 @@
 // Import admin posts index scss
 @import '/resources/sass/admin/posts/index.scss';
 
+// Import admin posts create scss
+@import '/resources/sass/admin/posts/create.scss';
+
 
 // Reset
 img {
@@ -31,6 +34,11 @@ img {
         color: white;
         transition: color 300ms linear;
     }
+}
+
+// Nav bar container gap
+.navbar .container {
+    gap: 20px !important;
 }
 // ----------------------------------
 
