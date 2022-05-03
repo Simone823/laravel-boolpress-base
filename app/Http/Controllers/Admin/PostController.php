@@ -57,6 +57,22 @@ class PostController extends Controller
         // Slug post title
         $slug = Str::slug($data['title']);
 
+        // Slug base
+        $slug_base = $slug;
+
+        // Counter slug
+        $counter = 1;
+
+        // Post present
+        $post_present = Post::where('slug', $slug)->first();
+
+        // While post present
+        while ($post_present) {
+            $slug = $slug_base . '-' . $counter;
+            $counter++;
+            $post_present = Post::where('slug', $slug)->first();
+        }
+
         // Creo un nuovo post
         $post = new Post();
         
@@ -118,6 +134,22 @@ class PostController extends Controller
 
         // Slug post title
         $slug = Str::slug($data['title']);
+
+        // Slug base
+        $slug_base = $slug;
+
+        // Counter slug
+        $counter = 1;
+
+        // Post present
+        $post_present = Post::where('slug', $slug)->first();
+
+        // While post present
+        while($post_present) {
+            $slug = $slug_base . '-' . $counter;
+            $counter++;
+            $post_present = Post::where('slug', $slug)->first();
+        }
 
         // Imposto lo sluga post
         $post->slug = $slug;
