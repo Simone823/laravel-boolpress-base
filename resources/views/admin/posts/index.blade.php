@@ -20,6 +20,8 @@
                 <th>Description</th>
                 <th>Image</th>
                 <th>Publication_date</th>
+                <th></th>
+                <th></th>
             </tr>
     
             {{-- Foreach posts --}}
