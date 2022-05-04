@@ -73,6 +73,7 @@
                 color: white;
                 text-transform: uppercase;
                 letter-spacing: 4px;
+                text-align: center;
             }
 
             .m-b-md {
